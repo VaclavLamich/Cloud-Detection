@@ -10,8 +10,10 @@ from sentinelhub import MimeType, CRS, BBox, SentinelHubRequest, SentinelHubDown
 
 
 
-CLIENT_ID='39d016f7-af27-47d4-851c-2d7e7789f52d'
-CLIENT_SECRET='.z~uuD8vM[;.GO&)EjHDLC>()T1RR<vnhE[]F!tE'
+#CLIENT_ID='39d016f7-af27-47d4-851c-2d7e7789f52d'
+#CLIENT_SECRET='.z~uuD8vM[;.GO&)EjHDLC>()T1RR<vnhE[]F!tE'
+CLIENT_ID=os.environ.get('SENTINEL_ID')
+CLIENT_SECRET=os.environ.get('SENTINEL_SECRET')
 config=SHConfig()
 
 if CLIENT_ID and CLIENT_SECRET:
